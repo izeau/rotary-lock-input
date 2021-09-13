@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>/r/badUIbattles: Rotary Lock Input</title>
+  <link rel="stylesheet" href="/lock.css">
+</head>
+
+<body>
+  <h1>Please enter your username</h1>
+
+  <svg class="lock" viewBox="0 0 100 100">
+    <defs>
+      <path id="path" d="M50,17a33,33 0 1,1 0,66a33,33 0 1,1 0,-66" />
+    </defs>
+    <path class="cursor" d="M50 10 l-2 -4 l4 0 z" />
+    <text fill="#fff" font-size="5" font-family="monospace" letter-spacing="2.74">
+      <textPath href="#path" />
+    </text>
+    <circle class="grab" cx="50" cy="50" r="40" />
+    <circle cx="50" cy="50" r="30" />
+  </svg>
+
+  <input type="text" class="text" disabled>
+
+  <div>
+    <button type="button" class="clear">CLEAR</button>
+    <button type="submit" class="submit">SUBMIT</button>
+  </div>
+
+  <script src="/lock.js"></script>
+</body>
+
+</html>
