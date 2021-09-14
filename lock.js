@@ -47,8 +47,8 @@ function mousemove(e) {
   }
 
   const { t } = polar(e);
-  const newAngle = oldAngle + t - offsetAngle;
-  const newIndex = Math.round((360 - newAngle - 2.7) / 10) % 36;
+  const newAngle = (oldAngle + t - offsetAngle + 360) % 360;
+  const newIndex = Math.round((360 - newAngle - 2.7) / 10 + 36) % 36;
 
   if (oldIndex !== newIndex) {
     const newDirection = Math.sign(((oldIndex - newIndex + 36) % 36) - 18);
