@@ -7,6 +7,9 @@ const textPath = lock.querySelector("textPath");
 const clearButton = document.querySelector(".clear");
 const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+const pathLengthMinusOneLetter = path.getTotalLength() - ((path.getTotalLength() / charset.length) / 2)
+textPath.setAttribute('textLength', pathLengthMinusOneLetter)
+
 let partialValue = "";
 let offsetAngle = null;
 let oldAngle = -2.7;
